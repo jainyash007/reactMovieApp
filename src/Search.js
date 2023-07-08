@@ -1,8 +1,8 @@
-import React from 'react'
-import { useGlobalContext } from './context'
+import React from "react";
+import { useGlobalContext } from "./context";
 
 const Search = () => {
-  const { query, setQuery, isError } = useGlobalContext();
+  const { query, setQuery } = useGlobalContext();
   return (
     <>
       <section className="search-section">
@@ -17,12 +17,9 @@ const Search = () => {
             />
           </div>
         </form>
-        <div className="card-error">
-          <p>{isError.show && isError.msg}</p>
-        </div>
       </section>
     </>
   );
 };
 
-export default Search
+export default Search;
